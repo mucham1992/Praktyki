@@ -1,16 +1,27 @@
 #include "Game.h"
 
+
 Game::Game()
 {
-Board board;
-FillerWithRandomValues filler;
-filler.fillBoard(board);\
-Generator generator;
-//ConverterCharBoardToString converter;
-//Converter.convertBoolBoardToString(board.theBoard);
-//DisplayGameBoardOnTheCommandLine display;
-//display(converter.boardConvertToString);
+filler.fillBoard(board);
+startInfiniteLoop();
+}
 
-
-
+void Game::startInfiniteLoop()
+{
+    while(1)
+        {
+        newPressed.checkStatusOfButtonPressed();
+        do
+        {
+            system("cls");
+            converter.convertBoolBoardToString((board.getTheBoard()));
+            display.displayGameBoardOnTheCommandLine(converter.getBoardConvertToString());
+            board = generator.generateNextBoard(board);
+            newPressed.checkStatusOfButtonPressed();
+            Sleep(1000);
+        }
+        while (newPressed.getStatusOfLoop() == true);
+        system("pause");
+        }
 }

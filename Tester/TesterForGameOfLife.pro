@@ -11,11 +11,27 @@ TEMPLATE = app
 
 SOURCES += \
     testmain.cpp \
-    ../filler.cpp \
-    ../filleremptyboard.cpp \
-    fillerwithrandomvalues.cpp \
     test_filleremptyboard.cpp \
+    test_generator.cpp \
+    ../GameOfLife/checkbuttonpressed.cpp \
+    ../GameOfLife/converterboolboardtostring.cpp \
+    ../GameOfLife/counterofneighbours.cpp \
+    ../GameOfLife/displaygameboardonthecommandline.cpp \
+    ../GameOfLife/filler.cpp \
+    ../GameOfLife/filleremptyboard.cpp \
+    ../GameOfLife/fillerwithrandomvalues.cpp \
+    ../GameOfLife/game.cpp \
+    ../GameOfLife/generator.cpp \
+    ../GameOfLife/iteratorOverCells.cpp \
+    ../GameOfLife/rules.cpp \
+    ../GameOfLife/savetofile.cpp \
+    test_checkfilecheckbuttonpressed.cpp \
+    mock_checkbuttonpressed.cpp \
+    ../GameOfLife/board.cpp \
+    test_converter.cpp \
     test_fillerwithrandomvalues.cpp
+
+
 
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which as been marked deprecated (the exact warnings
@@ -30,7 +46,23 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 HEADERS += \
     Tester_Catch.h \
-    ../board.h \
-    filler.h \
-    filleremptyboard.h \
-    fillerwithrandomvalues.h
+    ../GameOfLife/board.h \
+    ../GameOfLife/checkbuttonpressed.h \
+    ../GameOfLife/converterboolboardtostring.h \
+    ../GameOfLife/counterofneighbours.h \
+    ../GameOfLife/displaygameboardonthecommandline.h \
+    ../GameOfLife/filler.h \
+    ../GameOfLife/filleremptyboard.h \
+    ../GameOfLife/fillerwithrandomvalues.h \
+    ../GameOfLife/Game.h \
+    ../GameOfLife/generator.h \
+    ../GameOfLife/iteratorOverCells.h \
+    ../GameOfLife/rules.h \
+    ../GameOfLife/Savetofile.h \
+    mock_checkbuttonpressed.h
+
+DISTFILES += \
+    TesterForGameOfLife.pro.user
+
+SUBDIRS += \
+    ../GameOfLife/GameOfLife.pro
