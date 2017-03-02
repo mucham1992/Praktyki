@@ -1,11 +1,10 @@
 language: cpp
-
-compiler:
-  - gcc
-
-before_script:
-  - mkdir build
-  - cd build
-  - cmake ..
-
-script: make
+ 
+branches:
+  only:
+   - catchmoci
+ 
+before_script: ls
+ 
+script:
+  - make -C Build
