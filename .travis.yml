@@ -101,6 +101,7 @@ install:
 script:
   - qmake -v
   - qmake -r
+  - qmake TesterForGameOfLife.pro
   - make
 
 notifications:
