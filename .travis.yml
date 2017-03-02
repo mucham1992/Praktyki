@@ -1,10 +1,11 @@
 language: cpp
  
-before_script: ls
+sudo : false
        
 	script:
-	  - make -C Build
-	    
+	  - make -C Build config=release
+global_env : COVERITY_SCAN_TOKEN=[secure]
+os : linux
 	      
 	        
 		  
