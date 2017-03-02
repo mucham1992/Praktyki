@@ -1,11 +1,7 @@
 language: cpp
  
- branches:
-   only:
-      - catchmoci
+before_script: ls
        
-       before_script: ls
-        
 	script:
 	  - make -C Build
 	    
