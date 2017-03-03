@@ -1,4 +1,9 @@
+
+before_install:
+sudo apt-get install cmake 
+
 language: cpp
+
  
 branches:
   only:
