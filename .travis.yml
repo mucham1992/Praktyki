@@ -1,5 +1,6 @@
-before_install:
-sudo apt-get install cmake 
+before_install: 
+ - sudo apt-get install cmake 
+ - sudo apt-get -qq update
 
 language: cpp
 
