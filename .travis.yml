@@ -1,0 +1,15 @@
+before_install: 
+ - sudo apt-get install cmake 
+ - sudo apt-get -qq update
+
+language: cpp
+
+ 
+branches:
+  only:
+   - master
+ 
+before_script: ls
+ 
+script:
+  - make -C Build
