@@ -1,13 +1,10 @@
-before_install:
-  - test -n $CC  && unset CC
-  - test -n $CXX && unset CXX
-
-install: make get-deps
-
 language: cpp
-
-script: scons
-
-compiler:
-  - clang
-  - gcc
+ 
+branches:
+  only:
+   - catchmoci
+ 
+before_script: ls
+ 
+script:
+  - make -C Build
